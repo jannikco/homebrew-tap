@@ -2,8 +2,8 @@ cask "heybotos" do
   arch arm: "arm64", intel: "x64"
 
   version "0.3.0"
-  sha256 arm:   "07865e353cd30ec3db6023c5c95ab614fa5b219845c9d338b71ad71cee46bc7d",
-         intel: "9f85c629a3cf21d99481c6864885119d993f5117e24da7ccedfcea6b5110877a"
+  sha256 arm:   "ec3494d065da10e0ef00e5e6dc6a7a81d7ad561022128ba5524f85dbdb51cea0",
+         intel: "b9737e0be64dafd4c7506018ff9ee1460fd4a7171d611c9058cd6c135659afce"
 
   url "https://github.com/jannikco/heybotos/releases/download/v#{version}/HeyBotOS-#{version}-#{arch}.zip"
   name "HeyBotOS"
@@ -12,7 +12,7 @@ cask "heybotos" do
 
   livecheck do
     url :url
-    strategy :github_latest
+    strategy :github_releases
   end
 
   depends_on macos: :monterey
@@ -31,6 +31,10 @@ cask "heybotos" do
   ]
 
   caveats <<~EOS
+    HeyBotOS is in beta: expect rough edges and changes between versions. Its
+    workers edit files and run commands without asking first, so start with
+    projects that are in git.
+
     HeyBotOS runs the official coding CLIs with your own subscriptions. Install and
     sign in to at least one of: claude, codex, grok.
 
