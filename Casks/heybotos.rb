@@ -1,9 +1,9 @@
 cask "heybotos" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.3.1"
-  sha256 arm:   "26a912edad9c6ec41f58b03e91de68dd35fa2d84392318657f000bf055b24551",
-         intel: "53b058bb0b55a678fd562857a4907fb6198da4e303f72b724a5260d4a1a7030b"
+  version "0.4.0"
+  sha256 arm:   "420cb9ebeff07d47b1d71109f82e6cbdbf24ecfbf06fa1832cfbf5c2f3e2cfc6",
+         intel: "7f4efda79dd8c8abc8ebf43550545b174889303dcabbd6f74e9446d1ff92ec85"
 
   url "https://github.com/jannikco/heybotos/releases/download/v#{version}/HeyBotOS-#{version}-#{arch}.zip"
   name "HeyBotOS"
