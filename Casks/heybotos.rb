@@ -49,8 +49,9 @@ cask "heybotos" do
     HeyBotOS runs the official coding CLIs with your own subscriptions. Install and
     sign in to at least one of: claude, codex, grok.
 
-    This build is not notarised by Apple. The first time, macOS will refuse to
-    open it: go to System Settings > Privacy & Security and choose "Open Anyway".
+    This build is not notarised by Apple, so macOS stops it the first time you
+    open it. Choose OK in that message (not "Move to Trash"), then go to System
+    Settings > Privacy & Security, scroll to Security and choose "Open Anyway".
 
     Open HeyBotOS once after installing or upgrading: the app sets up and starts
     its background service.
