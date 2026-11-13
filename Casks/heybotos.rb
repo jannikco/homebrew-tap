@@ -1,9 +1,9 @@
 cask "heybotos" do
   arch arm: "arm64", intel: "x64"
 
-  version "0.4.0"
-  sha256 arm:   "420cb9ebeff07d47b1d71109f82e6cbdbf24ecfbf06fa1832cfbf5c2f3e2cfc6",
-         intel: "7f4efda79dd8c8abc8ebf43550545b174889303dcabbd6f74e9446d1ff92ec85"
+  version "0.5.0"
+  sha256 arm:   "cd5e77bb6adecf436d133637acace819409b066a4bc37266488e655aaf939e44",
+         intel: "8c4eabfa001dd5d1746b44c8490d2979bc5d9166bbac5ed3a12cf4b4aae2e069"
 
   url "https://github.com/jannikco/heybotos/releases/download/v#{version}/HeyBotOS-#{version}-#{arch}.zip"
   name "HeyBotOS"
@@ -26,6 +26,8 @@ cask "heybotos" do
     end
   end
 
+  # The app fetches and installs newer versions itself (Settings > General > Version).
+  auto_updates true
   depends_on macos: :monterey
 
   app "HeyBotOS.app"
